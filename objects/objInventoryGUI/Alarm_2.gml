@@ -1,0 +1,2 @@
+/// @description 
+canDelete = 1;
