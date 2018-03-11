@@ -32,8 +32,7 @@ if keyboard_check(ord("E")) && distance_to_object(objGate) <= 8 && key == 1
 	audio_play_sound(sndGate,10,0)
 	key = 0
 	with(objGate) {
-		image_index = 1	;
-		solid = 0;
+		image_index = 1	
 }	
 }
 //chest
@@ -42,8 +41,7 @@ if keyboard_check(ord("E")) && distance_to_object(objChest) <= 8 && objChest.ima
 	audio_play_sound(sndGate,10,0)
 
 	with(objChest) {
-		image_index = 1	;
-
+		image_index = 1	
 }	
 }
 if(keyboard_check_released(ord("F")))

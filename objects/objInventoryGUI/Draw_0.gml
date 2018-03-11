@@ -11,16 +11,16 @@ itemLeftStart = bbox_left + 10.5;
 itemTopStart = bbox_top + 7;
 
 for(i = 0; i < inventoryEndAt; ++i) {
-    for(j = 0; j < playerInventoryWidth; ++j) {
-        inventoryOnScreen = i;
-        if(j == 0)    
-            draw_text_transformed(itemLeftStart, itemTopStart + (i * 5), ds_grid_get(myItems, 0, i + scrolledAmount), 0.15, 0.15, 0);
-        if(j == 1)
-            draw_text_transformed(itemLeftStart + 20, itemTopStart + (i * 5), ds_grid_get(myItems, 1, i + scrolledAmount), 0.15, 0.15, 0);
-        if(j == 3)
-            draw_sprite_ext(ds_grid_get(myItems, j, i + scrolledAmount), 0, bbox_left + 6, itemTopStart + (i * 5) + 1, 0.5, 0.4,0,c_white,1);
-            
-    }
+	for(j = 0; j < playerInventoryWidth; ++j) {
+		inventoryOnScreen = i;
+		if(j == 0)	
+			draw_text_transformed(itemLeftStart, itemTopStart + (i * 5), ds_grid_get(myItems, 0, i + scrolledAmount), 0.15, 0.15, 0);
+		if(j == 1)
+			draw_text_transformed(itemLeftStart + 20, itemTopStart + (i * 5), ds_grid_get(myItems, 1, i + scrolledAmount), 0.15, 0.15, 0);
+		if(j == 3)
+			draw_sprite_ext(ds_grid_get(myItems, j, i + scrolledAmount), 0, bbox_left + 6, itemTopStart + (i * 5) + 1, 0.5, 0.4,0,c_white,1);
+			
+	}
 }
 
 draw_rectangle(bbox_left + 2, (itemTopStart - 2) + ((itemSelected - scrolledAmount) * 5), bbox_right - 2, ((itemTopStart - 2) + (itemSelected - scrolledAmount) * 5) + 4, true);

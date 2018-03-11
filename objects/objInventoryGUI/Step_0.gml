@@ -1,6 +1,6 @@
 /// @description using and discarding inventory items
 
-if((isEmpty == false) && instance_exists(objInventoryGUI) && keyboard_check(vk_shift) && keyboard_check(ord("E")) || keyboard_check(vk_enter)) {
+if((isEmpty == false) && instance_exists(objInventoryGUI) && keyboard_check(vk_shift) && keyboard_check(ord("E") && (canDelete = 1)) || keyboard_check(vk_enter) && (canDelete = 1)) {
 	script_execute(ds_grid_get(playerInventory, 4, itemSelected));
 	trashItem();
 	
